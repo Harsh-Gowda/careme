@@ -1,0 +1,123 @@
+@import 'variables';
+
+.c-doctors {
+    background-color: #fff;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $spacing-xl;
+
+        @media (max-width: $breakpoint-md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: $breakpoint-sm) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.c-doctor-card {
+    &__image-wrapper {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        margin-bottom: $spacing-md;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.5s ease;
+    }
+
+    &__socials {
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: $spacing-sm;
+        z-index: 2;
+        transition: bottom 0.3s ease;
+        padding-bottom: $spacing-md;
+    }
+
+    &__social-link {
+        width: 35px;
+        height: 35px;
+        background: $primary-color;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        &:hover {
+            background: #fff;
+            color: $primary-color;
+            transform: scale(1.1);
+        }
+    }
+
+    &__content {
+        padding: $spacing-sm 0;
+    }
+
+    &__name {
+        font-size: 1.5rem;
+        margin-bottom: $spacing-xs;
+        color: $dark-color;
+    }
+
+    &__specialty {
+        color: $primary-color;
+        font-weight: 600;
+        margin-bottom: $spacing-md;
+    }
+
+    &:hover {
+        .c-doctor-card__image-wrapper::after {
+            opacity: 1;
+        }
+
+        .c-doctor-card__image {
+            transform: scale(1.1);
+        }
+
+        .c-doctor-card__socials {
+            bottom: 0;
+        }
+    }
+}
+
+// Small outline button for card
+.c-btn--sm {
+    padding: $spacing-xs $spacing-md;
+    font-size: 0.85rem;
+    border-color: $primary-color;
+    color: $primary-color;
+
+    &:hover {
+        background-color: $primary-color;
+        color: #fff;
+    }
+}

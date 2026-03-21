@@ -1,0 +1,103 @@
+@import 'variables';
+
+.c-appointment {
+    background-color: #f7f9fc;
+    
+    &__wrapper {
+        gap: $spacing-xl;
+    }
+
+    &__info {
+        li {
+            margin-bottom: $spacing-md;
+            font-size: 1.1rem;
+            
+            strong {
+                color: $primary-color;
+                display: block;
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    &__form-container {
+        background: #fff;
+        padding: $spacing-xl;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    }
+}
+
+.c-form {
+    &__row {
+        display: flex;
+        gap: $spacing-md;
+        margin-bottom: $spacing-md;
+
+        @media (max-width: $breakpoint-sm) {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
+    &__group {
+        width: 100%;
+        margin-bottom: $spacing-md;
+
+        &--checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: $spacing-sm;
+            margin-bottom: $spacing-lg;
+        }
+    }
+
+    &__label {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: $dark-color;
+    }
+
+    &__input {
+        width: 100%;
+        padding: $spacing-sm;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: inherit;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            outline: none;
+            border-color: $primary-color;
+        }
+
+        &--textarea {
+            height: 120px;
+            resize: vertical;
+        }
+    }
+
+    &__checkbox {
+        width: 18px;
+        height: 18px;
+        margin-top: 3px;
+    }
+
+    &__label-checkbox {
+        font-size: 0.85rem;
+        color: $secondary-color;
+        line-height: 1.4;
+    }
+}
+
+// Utility
+.col-md-6 { flex: 0 0 calc(50% - #{$spacing-xl / 2}); }
+@media (max-width: $breakpoint-md) {
+    .col-md-6 { flex: 0 0 100%; }
+}
+.w-100 { width: 100%; }

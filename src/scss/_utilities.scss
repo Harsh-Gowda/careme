@@ -1,0 +1,32 @@
+@import 'variables';
+
+// Container
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-md;
+    padding-left: $spacing-md;
+
+    @media (min-width: $breakpoint-sm) { max-width: 540px; }
+    @media (min-width: $breakpoint-md) { max-width: 720px; }
+    @media (min-width: $breakpoint-lg) { max-width: 960px; }
+    @media (min-width: $breakpoint-xl) { max-width: 1140px; }
+}
+
+// Spacing Utilities
+@each $prop, $abbrev in (margin: m, padding: p) {
+    @each $size, $val in (xs: $spacing-xs, sm: $spacing-sm, md: $spacing-md, lg: $spacing-lg, xl: $spacing-xl) {
+        .#{$abbrev}-#{$size} { #{$prop}: $val; }
+        .#{$abbrev}t-#{$size} { #{$prop}-top: $val; }
+        .#{$abbrev}b-#{$size} { #{$prop}-bottom: $val; }
+        .#{$abbrev}l-#{$size} { #{$prop}-left: $val; }
+        .#{$abbrev}r-#{$size} { #{$prop}-right: $val; }
+    }
+}
+
+// Flex Utilities
+.d-flex { display: flex; }
+.justify-content-center { justify-content: center; }
+.justify-content-between { justify-content: space-between; }
+.align-items-center { align-items: center; }
