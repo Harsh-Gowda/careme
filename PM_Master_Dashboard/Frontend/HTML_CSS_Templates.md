@@ -88,7 +88,7 @@ Task 3: Header & Navigation
 ## Header & Navigation
 
 **Assignee:** Frontend Developer  
-**Status:** To Do  
+**Status:** Done  
 **Priority:** High  
 **Deadline:** 2024-04-21  
 **Estimated Hours:** 10
@@ -131,8 +131,8 @@ Task 4: Hero Section
 
 ## Hero Section
 
-**Assignee:** Frontend Developer  
-**Status:** To Do  
+**Assignee:** Antigravity (Frontend Developer)  
+**Status:** Done  
 **Priority:** High  
 **Deadline:** 2024-04-22  
 **Estimated Hours:** 8
@@ -174,8 +174,8 @@ Task 5: Services Section
 
 ## Services Section
 
-**Assignee:** Frontend Developer  
-**Status:** To Do  
+**Assignee:** Antigravity (Frontend Developer)  
+**Status:** Done  
 **Priority:** Medium  
 **Deadline:** 2024-04-24  
 **Estimated Hours:** 10
@@ -216,8 +216,8 @@ Task 6: Doctor Profiles Section
 
 ## Doctor Profiles Section
 
-**Assignee:** Frontend Developer  
-**Status:** To Do  
+**Assignee:** Antigravity (Frontend Developer)  
+**Status:** Done  
 **Priority:** Medium  
 **Deadline:** 2024-04-25  
 **Estimated Hours:** 8
@@ -301,7 +301,7 @@ Task 8: Footer
 ## Footer
 
 **Assignee:** Frontend Developer  
-**Status:** To Do  
+**Status:** Done  
 **Priority:** Medium  
 **Deadline:** 2024-04-27  
 **Estimated Hours:** 6

@@ -13,6 +13,16 @@
         img { transition: transform 0.5s ease; }
     }
 
+    &__meta {
+        display: inline-block !important;
+        width: auto !important;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: $spacing-sm;
+        font-weight: 700;
+        white-space: nowrap !important;
+    }
+
     &:hover {
         transform: translateY(-10px);
         box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;

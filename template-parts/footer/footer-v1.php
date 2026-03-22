@@ -72,7 +72,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="c-footer__column">
+            <div class="c-footer__column c-footer__column--newsletter">
                 <h4 class="c-footer__title"><?php esc_html_e( 'Newsletter', 'careme' ); ?></h4>
                 <p class="c-footer__text mb-md"><?php esc_html_e( 'Subscribe for latest dental health tips.', 'careme' ); ?></p>
                 <form class="c-footer__newsletter">

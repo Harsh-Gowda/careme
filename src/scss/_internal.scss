@@ -1,8 +1,13 @@
 @import 'variables';
 
 .c-page-header {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: #f8f9fa;
     border-bottom: 1px solid rgba(0,0,0,0.05);
+
+    &.bg-primary, &.bg-primary.py-xl {
+        background: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 10%) 100%) !important;
+        color: #fff !important;
+    }
 
     &__title {
         font-weight: 800;

@@ -58,7 +58,11 @@ add_action( 'widgets_init', 'careme_widgets_init' );
  * Enqueue scripts and styles
  */
 function careme_scripts() {
-    wp_enqueue_style( 'careme-style', get_stylesheet_uri(), array(), '1.0.0' );
+    // Google Fonts
+    wp_enqueue_style( 'careme-fonts', 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap', array(), null );
+
+    wp_enqueue_style( 'careme-style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
+
     
     // Theme Scripts
     wp_enqueue_script( 'careme-mobile-menu', get_template_directory_uri() . '/src/js/mobile-menu.js', array(), '1.0.0', true );
@@ -77,3 +81,9 @@ add_action( 'wp_enqueue_scripts', 'careme_scripts' );
 require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/icons.php';
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Admin Dashboard UI
+ */
+require get_template_directory() . '/inc/admin/dashboard.php';
+

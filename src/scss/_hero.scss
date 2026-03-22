@@ -1,45 +1,72 @@
-@import 'variables';
-
-.c-hero {
-    position: relative;
-    padding: $spacing-xl * 2 0;
-    color: #fff;
-    background-color: $dark-color; // Fallback
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-
+/* Pearl Hero Section Styles */
+.c-hero-pearl {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    
     &__content {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
-    &__title {
-        font-size: 3.5rem;
-        font-weight: 800;
-        margin-bottom: $spacing-md;
-        line-height: 1.2;
-
-        @media (max-width: $breakpoint-md) {
-            font-size: 2.5rem;
+        h1 {
+            color: $dark-color;
+            margin-bottom: $spacing-md;
+        }
+        
+        p {
+            color: $secondary-color;
+            font-family: $font-family-sans;
         }
     }
-
-    &__subtitle {
-        font-size: 1.25rem;
-        margin-bottom: $spacing-lg;
-        opacity: 0.9;
+    
+    &__image-wrapper {
+        position: relative;
     }
-
-    &__actions {
-        display: flex;
-        gap: $spacing-md;
-        justify-content: center;
-
-        @media (max-width: $breakpoint-sm) {
-            flex-direction: column;
-            align-items: center;
+    
+    &__image {
+        position: relative;
+        z-index: 2;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
+    }
+    
+    &__accent {
+        z-index: 1;
+        pointer-events: none;
+        user-select: none;
+    }
+}
+
+/* Button styles update for Pearl */
+.btn--primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: #fff;
+    font-weight: 500;
+    
+    &:hover {
+        background-color: darken($primary-color, 10%);
+        border-color: darken($primary-color, 10%);
+        color: #fff;
+    }
+}
+
+.btn--outline-dark {
+    border: 1px solid $dark-color;
+    color: $dark-color;
+    background: transparent;
+    
+    &:hover {
+        background-color: $dark-color;
+        color: #fff;
+    }
+}
+
+@media (max-width: 991px) {
+    .c-hero-pearl {
+        min-height: auto;
+        padding-top: $spacing-xl;
+        padding-bottom: $spacing-xl;
     }
 }

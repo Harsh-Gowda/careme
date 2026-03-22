@@ -9,11 +9,11 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
-    <section class="c-page-header py-xl bg-light">
+    <section class="c-page-header py-xl bg-primary text-white">
         <div class="container">
-            <div class="c-page-header__content text-center">
-                <h1 class="c-page-header__title"><?php esc_html_e( 'Health Library', 'careme' ); ?></h1>
-                <p class="text-muted mt-sm"><?php esc_html_e( 'Latest news, research, and oral health tips from our experts.', 'careme' ); ?></p>
+            <div class="c-page-header__content text-center py-lg">
+                <h1 class="c-page-header__title display-4 font-weight-bold"><?php esc_html_e( 'Health Library', 'careme' ); ?></h1>
+                <p class="lead opacity-75 mt-md mx-auto" style="max-width: 700px;"><?php esc_html_e( 'Expert advice, late news, and comprehensive guides for your oral health journey.', 'careme' ); ?></p>
             </div>
         </div>
     </section>

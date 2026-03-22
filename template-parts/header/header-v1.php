@@ -9,15 +9,17 @@
     <div class="container c-header__container d-flex align-items-center justify-content-between">
         <div class="c-header__branding">
             <?php if ( has_custom_logo() ) : ?>
-                <?php the_custom_logo(); ?>
+                <div class="c-header__logo">
+                    <?php the_custom_logo(); ?>
+                </div>
             <?php else : ?>
                 <h1 class="c-header__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
             <?php endif; ?>
         </div>
 
-        <div class="c-header__right d-flex align-items-center">
+        <div class="c-header__navigation d-flex align-items-center">
             <nav id="site-navigation" class="c-nav js-nav" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'careme' ); ?>">
-                <button class="c-nav__toggle js-nav-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <button class="c-nav__toggle js-nav-toggle d-md-none" aria-controls="primary-menu" aria-expanded="false">
                     <span class="u-sr-only"><?php esc_html_e( 'Menu', 'careme' ); ?></span>
                     <span class="c-nav__toggle-icon"></span>
                 </button>
@@ -27,14 +29,14 @@
                         'theme_location' => 'primary',
                         'menu_id'        => 'primary-menu',
                         'container'      => false,
-                        'menu_class'     => 'c-nav__menu list-unstyled d-flex align-items-center mb-0 gap-3',
+                        'menu_class'     => 'c-nav__menu list-unstyled align-items-center mb-0 gap-4',
                         'fallback_cb'    => '__return_false',
                     ) );
                     ?>
                 </div>
             </nav>
 
-            <div class="c-header__cta d-flex align-items-center gap-4">
+            <div class="c-header__cta d-none d-lg-flex align-items-center gap-4 ms-lg-5">
                 <div class="c-header__search js-search-toggle">
                     <?php echo careme_get_icon( 'search' ); ?>
                 </div>

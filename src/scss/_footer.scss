@@ -7,8 +7,13 @@
 
     &__grid {
         display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1.5fr;
-        gap: $spacing-xl;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+        gap: $spacing-lg;
+
+        @media (max-width: $breakpoint-xl) {
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
+            grid-row-gap: $spacing-xl;
+        }
 
         @media (max-width: $breakpoint-md) {
             grid-template-columns: 1fr 1fr;
@@ -21,9 +26,11 @@
 
     &__site-title {
         font-size: 1.75rem;
-        font-weight: 700;
+        font-weight: 800;
+        letter-spacing: -0.5px;
         color: #fff;
         text-decoration: none;
+        display: block;
     }
 
     &__description {
@@ -133,6 +140,53 @@
             margin-left: $spacing-md;
             text-decoration: none;
             &:hover { color: #fff; }
+        }
+    }
+}
+
+/* Footer v3 - Dark Pearl */
+.c-footer--v3 {
+    background-color: #000;
+    
+    .text-primary {
+        color: $primary-color !important;
+    }
+
+    .c-footer__brand {
+        h2 {
+            font-family: $font-family-serif;
+            font-weight: 500;
+        }
+    }
+
+    h3 {
+        font-family: $font-family-sans;
+        font-weight: 600;
+    }
+
+    .list-unstyled {
+        li {
+            margin-bottom: $spacing-md;
+            
+            a {
+                color: rgba(255, 255, 255, 0.6);
+                transition: color 0.3s ease;
+                
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .btn--outline-light {
+        border-color: rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.6);
+        
+        &:hover {
+            background-color: $primary-color;
+            border-color: $primary-color;
+            color: #fff;
         }
     }
 }
