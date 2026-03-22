@@ -167,8 +167,29 @@ function careme_theme_dashboard_html() {
                     <p style="color: #50575e; font-size: 1.05rem;"><?php esc_html_e( 'Increase your website functionality by installing these highly recommended plugins. These are fully compatible with your CareMe theme.', 'careme' ); ?></p>
                 </div>
 
-                <div class="careme-plugins-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px;">
-                    <!-- Plugin 1 -->
+                		<div class="careme-plugins-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px;">
+
+			<!-- CareMe Connect Form Builder (Proprietary) -->
+			<div class="careme-plugin-card" style="background: #fff; border: 2px solid #2271b1; border-radius: 8px; padding: 24px; display: flex; flex-direction: column;">
+				<div class="plugin-header" style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+					<div class="plugin-icon" style="background: #2271b1; color: white; width: 48px; height: 48px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+						📋
+					</div>
+					<div>
+						<h3 style="margin: 0; font-size: 16px;">CareMe Forms & SaaS</h3>
+						<span style="font-size: 12px; background: #d63638; color: white; padding: 2px 6px; border-radius: 4px; font-weight: bold;">Essential</span>
+					</div>
+				</div>
+				<div class="plugin-desc" style="flex-grow: 1; margin-bottom: 20px;">
+					<p style="margin: 0; color: #50575e; font-size: 14px;">The official lead capture plugin for the CareMe theme. Build beautiful booking forms, route leads to email for free, and unlock premium integration with the CareMe Lead Management SaaS.</p>
+				</div>
+				<div class="plugin-actions">
+					<a href="#" class="button button-primary" style="width: 100%; text-align: center; margin-bottom: 8px;"><?php esc_html_e( 'Install & Activate', 'careme' ); ?></a>
+					<a href="#" style="display: block; text-align: center; color: #2271b1; text-decoration: none; font-size: 13px;">View Details</a>
+				</div>
+			</div>
+
+			<!-- Elementor -->                  <!-- Plugin 1 -->
                     <div class="careme-plugin-card bg-white" style="border: 1px solid #ccd0d4; border-radius: 4px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,.04); display: flex; flex-direction: column;">
                         <div style="display: flex; align-items: center; margin-bottom: 15px; gap: 15px;">
                             <div style="width: 50px; height: 50px; background: #92003B; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 24px;">E</div>
